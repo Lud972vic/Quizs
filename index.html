@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/sweetalert2.min.css" />
+  <title>ALDI Recrutement Quiz</title>
+</head>
+
+<body onload="clickLogin()">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#"><img src="img/logo.svg" alt="sql" width="15%" class="mx-3" /> Choisir
+      son Quiz</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="#" onclick="clickSoon();"><img src="img/powerbi.png"
+            alt="powerbi" />PowerBI</a>
+        <a class="nav-item nav-link active text-dark" href="#" onclick="clickAvailable();"><img src="img/sql.png"
+            alt="sql" />SQL</a>
+        <a class="nav-item nav-link" href="#" onclick="clickSoon();"><img src="img/access.png"
+            alt="access" />Access/VBA</a>
+        <a class="nav-item nav-link" href="#" onclick="clickSoon();"><img src="img/python.png" alt="python" />Python</a>
+      </div>
+    </div>
+  </nav>
+  <div class="container h-100 mb-5">
+    <div class="row">
+      <div class="text-center">
+        <img src="img/ALDI.jpg" class="img-fluid rounded mt-5" alt="Quiz" style="width: 50%" />
+        <div class="row">
+          <div class="float-right">
+            <button type="reset" class="btn btn-outline-danger btn-sm" onclick="reload();">
+              Réinitialiser le Quiz
+            </button>
+            <button type="button" class="btn btn-outline-primary btn-sm" onclick="clickAbout();">
+              À propos de
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center align-items-center" id="group-nomprenom">
+      <div class="col-12 col-md-4 box">
+        <div class="text-center">
+          <img src="img/quiz.jpg" class="img-fluid rounded" alt="Quiz" style="width: 50%" />
+        </div>
+        <p>Bonjour,</p>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="text-nomprenom" placeholder="E. Ludovic" />
+          <label for="text-nomprenom">Votre nom et votre prénom</label>
+        </div>
+        <div class="text-center">
+          <button type="submit" id="button" value="button" class="btn btn-outline-primary btn-lg btn-block"
+            onclick="clickLogin();">
+            Valider
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="row h-100 justify-content-center align-items-center">
+      <div class="col-12 col-md-10 box" id="group-answer">
+        <h1 class="text-center" id="questionNo">Quiz</h1>
+        <p id="question" class="fw-bold text-primary">Question</p>
+
+        <div class="form-floating mb-3 cache" id="text-field">
+          <input type="text" required class="form-control" id="text-answer" autocomplete="off" />
+          <label for="text-field">Votre réponse (Saisir 2 pour le Choix n°2...)</label>
+        </div>
+        <div class="text-center">
+          <button type="submit" id="buttonAnswer" value="button" class="btn btn-outline-primary btn-lg btn-block"
+            onclick="clickAnswer();">
+            Valider
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer bg-primary">
+    <p>© 2023 Copyright<a href="https://github.com/Lud972vic"><img src="img/github.png" alt="github"></a></p>
+  </div>
+
+  <script src="js/jquery-3.2.1.slim.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/sweetalert2.all.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
